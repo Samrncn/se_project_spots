@@ -1,21 +1,23 @@
-# Project 3: Spots
+# Project Name: Spots
 
-### Overview  
+## Description
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+**Spots** is web application designed to showcase locations through a gallery of images. Users can view photographs of various spots, each with a brief title and the option to like their favorites. The app features a clean, responsive design, making it accessible on various devices. Users can also edit their profile information and create new posts to share their own experiences.
+
+## Functionality
+
+Display a grid of images with titles and like buttons.
+Allow users to edit their profile and add new posts.
+Responsive design that adapts to different screen sizes.
+
+## Technologies and Techniques Used
+
+- **HTML**: Structure of the web application.
+- **CSS**: Styling and layout, including Flexbox and Grid for responsive design.
+- **Responsive Design.**
+
+## Screenshots
+
+## Deployed Project
+
+You can view this website on GitHub Pages [here](https://your-github-username.github.io/spots).
