@@ -20,4 +20,4 @@ Responsive design that adapts to different screen sizes.
 
 ## Deployed Project
 
-You can view this website on GitHub Pages [here](https://your-github-username.github.io/spots).
+You can view this website on GitHub Pages [here](https://samrncn.github.io/se_project_spots/).
