@@ -21,3 +21,8 @@ Responsive design that adapts to different screen sizes.
 ## Deployed Project
 
 You can view this website on GitHub Pages [here](https://samrncn.github.io/se_project_spots/).
+
+## Demo Video
+Here’s a short video of the project:
+
+[Watch the video](https://drive.google.com/file/d/1sYANztmX7tlb4J3u7AgpqynP183VxqCY/view?usp=sharing)
