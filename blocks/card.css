@@ -7,7 +7,7 @@
   width: 100%;
   display: block;
   object-fit: cover;
-  border-radius: 8%;
+  border-radius: 8px;
 }
 
 .card__content {
@@ -51,6 +51,7 @@
   }
 
   .card__title {
+    max-width: 95px;
     font-size: 16px;
     line-height: 1;
   }
