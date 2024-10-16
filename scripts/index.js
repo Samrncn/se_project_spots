@@ -7,3 +7,22 @@ const initialCards = [
   {name:"Glendale", link: "https://unsplash.com/photos/sheep-on-grass-field-sfB_Nw9sggw"},
 
 ];
+
+const profileEditButton = document.querySelector(".profile__edit-btn");
+
+const editProfileModal = document.querySelector("#edit-modal");
+
+const closeProfileModal = editProfileModal.querySelector(".modal__close-btn")
+
+
+function openModal(){
+  editProfileModal.classList.add("modal_opened");
+}
+
+function closeModal() {
+  editProfileModal.classList.remove("modal_opened");
+}
+
+profileEditButton.addEventListener("click", openModal);
+
+closeProfileModal.addEventListener("click", closeModal);
