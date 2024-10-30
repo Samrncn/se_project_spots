@@ -71,7 +71,7 @@
   background-color: #fff;
 }
 
-.modal__close_type_preview {
+.modal__close-btn_type_preview {
   background-image: url(../images/close-preview-icon.svg);
   top: 1px;
   right: -45.57px;
