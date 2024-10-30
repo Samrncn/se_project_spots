@@ -5,7 +5,7 @@ const initialCards = [
   {name:"Happy Hour", link: "https://images.unsplash.com/photo-1728177196109-f6d1227c3fb9?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "fridge with clear glass door filled with wine"},
   {name:"Horse with no name", link: "https://images.unsplash.com/photo-1534774474501-25b647a3f1b2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "ash grey horse walking on mountan side"},
   {name:"Glendale", link: "https://images.unsplash.com/photo-1528709024086-98a7672e0b9d?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", alt: "Sheep in a field"},
-
+  {name:"praticum", link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg", alt: "Sheep in a field"}
 ];
 // used for edit profile modal
 const profileEditButton = document.querySelector(".profile__edit-btn");
@@ -31,6 +31,11 @@ const cardForm = addCardModal.querySelector(".modal__form");
 const cardLinkInput = addCardModal.querySelector("#add-card-link-input");
 const cardCaptionInput = addCardModal.querySelector("#add-card-name-input");
 
+const previewModal = document.querySelector("#preview-modal");
+const previewImgModal = previewModal.querySelector(".modal__img");
+const previewCaptionModal = previewModal.querySelector(".modal__caption");
+const previewCloseModalBtn = previewModal.querySelector(".modal__close-btn");
+
 
 function getCardElement (data) {
   const cardElement = cardTemplate.content.querySelector(".card").cloneNode(true);
@@ -47,6 +52,16 @@ function getCardElement (data) {
     cardElement.remove();
   });
 
+  cardImgElement.addEventListener("click", () => {
+    openModal(previewModal);
+    previewImgModal.src = data.link;
+    previewImgModal.alt = data.alt;
+    previewCaptionModal.textContent = data.name;
+  })
+
+  previewCloseModalBtn.addEventListener("click", () => {
+    closeModal(previewModal);
+  });
 
 
   cardNameElement.textContent = data.name;
@@ -96,7 +111,6 @@ closeProfileModal.addEventListener("click", () => {
 
 });
 
-
 newPostbuttton.addEventListener("click", () => {
   openModal(addCardModal);
 });
@@ -104,6 +118,8 @@ newPostbuttton.addEventListener("click", () => {
 closePostbutton.addEventListener("click", () =>{
   closeModal(addCardModal);
 })
+
+
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
 cardForm.addEventListener("submit", handleCardSubmit);
