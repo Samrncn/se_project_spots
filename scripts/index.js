@@ -30,6 +30,7 @@ const cardForm = addCardModal.querySelector(".modal__form");
 const cardLinkInput = addCardModal.querySelector("#add-card-link-input");
 const cardCaptionInput = addCardModal.querySelector("#add-card-name-input");
 
+// for preview modal 
 const previewModal = document.querySelector("#preview-modal");
 const previewImgModal = previewModal.querySelector(".modal__img");
 const previewCaptionModal = previewModal.querySelector(".modal__caption");
