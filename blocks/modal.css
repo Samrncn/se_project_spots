@@ -168,11 +168,11 @@
   }
 
   .modal__close-btn {
-    top: -38px;
-    right: -8px;
+    top: 12px;
+    right: 12px;
   }
 
-  .modal__close_type_preview {
+  .modal__close-btn_type_preview {
     right: -9px;
     top: -42px;
   }
