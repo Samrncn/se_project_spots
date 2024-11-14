@@ -18,16 +18,42 @@ const checkInputValidity = (formEl, inputEl) => {
   }
 };
 
+const hasInvalidInput = (inputList) => {
+  return inputList.some((input) => {
+    return !input.validity.valid;
+  });
+}
+
+const toggleButtonState = (inputList, buttonEl) => {
+  if (hasInvalidInput(inputList)){
+    disabledButton(buttonEl);
+  } else {
+    buttonEl.disabled = false;
+    buttonEl.classList.remove("modal__submit-btn_type_invalid");
+  }
+}
+
+const resetValidation = (formEl, inputList) => {
+  inputList.forEach((input) => {
+    hideInputError(formEl, input);
+  });
+}
+
+const disabledButton = (buttonEl) => {
+  buttonEl.disabled = true;
+  buttonEl.classList.add("modal__submit-btn_type_invalid");
+}
+
 const setEventListeners = (formEl) => {
   const inputList = Array.from(formEl.querySelectorAll(".modal__input"));
-  const buttonElement = formEl.querySelector(".modal__submit-btn");
+  const buttonEl = formEl.querySelector(".modal__submit-btn");
 
-  //toggleButtonState(inputList, buttonElement);
+  toggleButtonState(inputList, buttonEl);
 
-  inputList.forEach((inputElement) => {
-    inputElement.addEventListener("input", function () {
-      checkInputValidity(formEl, inputElement);
-      //toggleButtonState(inputList, buttonElement);
+  inputList.forEach((inputEl) => {
+    inputEl.addEventListener("input", function () {
+      checkInputValidity(formEl, inputEl);
+      toggleButtonState(inputList, buttonEl);
     });
   });
 };
