@@ -75,6 +75,7 @@ function openModal(modal){
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  cardForm.reset();
 }
 
 function handleEditFormSubmit(evt) {
@@ -103,7 +104,7 @@ profileEditButton.addEventListener("click", () => {
 
 
 closeProfileModal.addEventListener("click", () => {
-  closeModal(editProfileModal );
+  closeModal(editProfileModal);
 
 });
 
