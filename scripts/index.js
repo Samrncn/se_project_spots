@@ -94,7 +94,7 @@ function handleCardSubmit (evt){
   cardsList.prepend(cardsElement);
   closeModal(addCardModal);
   evt.target.reset();
-  disabledButton(cardSubmitBtn);
+  disabledButton(cardSubmitBtn, settings);
 
 };
 
