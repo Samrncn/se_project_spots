@@ -43,17 +43,11 @@ const toggleButtonState = (inputList, buttonEl, config) => {
   }
 }
 
-const resetValidation = (formEl, inputList, config) => {
-  inputList.forEach((input) => {
-    hideInputError(formEl, input, config);
-  });
-}
-
 const disabledButton = (buttonEl, config) => {
   buttonEl.disabled = true;
   buttonEl.classList.add(config.inactiveButtonClass);
 }
-// TODO - add confige to toggle btn fucntion call
+
 const setEventListeners = (formEl, config) => {
   const inputList = Array.from(formEl.querySelectorAll(config.inputSelector));
   const buttonEl = formEl.querySelector(config.submitButtonSelector);
